@@ -1,0 +1,16 @@
+请根据以下评估数据，判断检索结果是否有效回答了用户问题，并给出理由。
+
+---
+评估数据：
+用户问题（question）：{question}
+标准答案（ground_truth）：{ground_truth}
+检索回答（top_chunk）：{top_chunk}
+BGE模型向量相似度得分（similarity_score）：{similarity_score}
+是否命中（is_hit）：{is_hit}
+---
+
+判定规则：
+- 如果 is_hit 为 true，说明检索结果有效回答了用户问题，请说明有效的理由
+- 如果 is_hit 为 false，说明检索结果未能有效回答用户问题，请说明无效的理由
+
+请直接用一段话给出理由（100字以内），不要输出 JSON 格式：

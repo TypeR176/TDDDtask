@@ -1,0 +1,9 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+logs/
+output_report*.json
+uv.lock
+.idea/

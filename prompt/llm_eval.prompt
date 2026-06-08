@@ -1,0 +1,21 @@
+你是一个RAG检索质量评估专家。
+你的任务是判断检索到的文本片段{top_chunk}是否能正确回答用户的问题{question}，并以标准答案{ground_truth}作为参考。
+
+评估维度：
+1. 语义相关性：top_chunk 是否与 question 的主题一致
+2. 信息完整性：top_chunk 是否包含回答 question 所需的关键信息
+3. 答案准确性：top_chunk 的内容是否与 ground_truth 的语义一致
+
+请严格按照以下 JSON 格式返回结果，不要输出其他内容：
+{
+    "is_hit": true/false,
+    "reasoning": "判定理由，简明扼要，50字以内"
+}
+
+---
+用户问题（question）：{question}
+标准答案（ground_truth）：{ground_truth}
+检索片段（top_chunk）：{top_chunk}
+---
+
+请返回 JSON 结果：
